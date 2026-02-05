@@ -129,4 +129,5 @@ To ensure consistent results across different environments, this repository foll
 * **Customization:** If you wish to publish results based on this code, please document your exact reward weights ($w_n$) and environment configurations.
 ---
 ## 📄 Reference
-Paper: KICS 2025 (oral) — 
+* **Paper:** [Energy-Efficient Ground Station Optimization for LEO Satellites via Reinforcement Learning](https://www.dbpia.co.kr/Journal/articleDetail?nodeId=NODE12132784)
+* **Conference:** KICS 2025 (Oral Session)
