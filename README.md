@@ -34,7 +34,6 @@ Evaluation uses **pure exploitation** for DQN (**ε=0**), run over **N evaluatio
 - **AoI / Queue Dispersion** are “behavioral” metrics that make the learned policy easier to justify than return alone.
 - **Energy** is reported as a proxy via average battery level (normalized).
 
-> Replace the numbers above with your measured values from `eval_only.py` outputs to keep the README fully honest and reproducible.
 
 ---
 
