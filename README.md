@@ -85,11 +85,10 @@ To improve **interpretability** and **fault isolation**, a planned direction is 
 ├── env.py                 # OCO2Env (Gym) & physics-inspired simulation.
 ├── satellite_utils.py     # Utilities for TLE handling and Line-of-Sight (LoS) calculations.
 ├── agent.py               # DQN (PER + n-step return).
-├── night_train.py         # Time-limited training (checkpoints + curve snapshots).
+├── main_all.py            # DQN Training
 ├── eval.py                # Integrated evaluation script for comparing all policies.
 ├── random_policy.py       # Heuristic policy selecting the nearest visible GS.
-├── greedy_policy.py       # Baseline policy selecting actions randomly to test lower bounds.
-└── checkpoints/           # Saved model checkpoints (.pt).
+└── greedy_policy.py       # Baseline policy selecting actions randomly to test lower bounds.
 
 ```
 ---
@@ -107,8 +106,8 @@ pip install -r requirements.txt
 ```
 ### 2) Train & Evaluate
 ```bash
-# Time-limited training with curve snapshots
-python night_train.py
+# DQN training
+python main_all.py
 
 # Run evaluation using saved checkpoints
 python eval.py
@@ -123,7 +122,7 @@ After running `night_train.py`, the following files are generated:
 * `train_progress.csv` & `episode_rewards.csv`: Full training logs.
 * `curve_final.png`: Training reward visualization (updated periodically as `curve_epXXXX.png`).
 
-### 2) Evaluation Outputs (`/figs` & root)
+### 2) Evaluation Outputs
 Running `eval.py` produces comparative logs and visualizations:
 * **Episode-level:** `random_log.csv`, `greedy_log.csv`, `dqn_best_log.csv` (Total rewards per episode).
 * **Step-level:** `*_steps_log.csv` (Per-step energy levels and individual AoI for all 10 GS), `*_queue_log.csv` (Data backlog status for each GS queue).
